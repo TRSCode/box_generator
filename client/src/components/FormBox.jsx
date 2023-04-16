@@ -1,14 +1,15 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 
 const FormBox = (props) => {
     const { colorArray, setColorArray } = props;
     const [ color, setColor ]= useState('');
-    // const [inputValue, setInputValue] = useState("#000000")
+    // const [ size, setSize ] = useState('');
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setColorArray([...colorArray,color]);
         setColor("");
-        // setInputValue("#000000");
+        // setSize("");
     };
 
 
@@ -23,5 +24,5 @@ const FormBox = (props) => {
         </div>
     )
 }
-// value={inputValue}
+
 export default FormBox
